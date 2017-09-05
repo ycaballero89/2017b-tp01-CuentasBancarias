@@ -23,7 +23,6 @@ Escribir clases para transferir una suma determinada de una cuenta bancaria a ot
 * 981fa94 ROJO: Se agrega el caso para n = 2
 * a953c7c VERDE: Se resuelve caso base
 * 2401573 ROJO: Primera prueba, se define clase y caso base, n = 1
-
 </pre>
 
 ## Entrega
