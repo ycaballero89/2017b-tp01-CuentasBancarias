@@ -8,7 +8,11 @@ Deberá demostrar y evidenciar el uso de Test-driven Development. El trabajo se 
 
 ### Problema a resolver
 
-Escribir clases para transferir una suma determinada de una cuenta bancaria a otra. Se deberán considerar casos especiales, como saldo insuficiente, entre otros de su ocurrencia.
+Escribir clases para transferir una suma determinada de una cuenta bancaria a otra. Se deberán considerar casos especiales, como saldo insuficiente, entre otros de su ocurrencia. Se espera poder utilizar sentencias similares a esta:
+
+```
+  cuentaOrigen.transferirMontoHacia(monto, cuentaDestino);
+```
 
 ### Metodología
 
