@@ -13,6 +13,17 @@ public class TestTransferencia {
 	
 	@Test
 	public void queTransfieraMonto(){
-		Assert.fail();
+		CuentaBancaria cuentaOrigen = new CuentaBancaria(3500);
+		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
+		double saldoInicialOrigen = cuentaOrigen.obtenerSaldo();
+		double saldoInicialDestino = cuentaDestino.obtenerSaldo();
+		double monto = 400;
+		
+		cuentaOrigen.transferirMontoHacia(monto, cuentaDestino);
+		
+		//Verifica saldo cuenta origen
+		Assert.assertEquals(saldoInicialOrigen-monto, cuentaOrigen.obtenerSaldo(), 0);
+		//Verifica saldo cuenta destino
+		Assert.assertEquals(saldoInicialDestino+monto, cuentaDestino.obtenerSaldo(), 0);
 	}
 }
