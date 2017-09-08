@@ -7,6 +7,7 @@ public class TestTransferencia {
 
 	@Test
 	public void queInicializeSaldo(){
-		Assert.fail();
+		CuentaBancaria cuenta = new CuentaBancaria(3500);
+		Assert.assertEquals(3500, cuenta.obtenerSaldo(), 0);
 	}
 }
