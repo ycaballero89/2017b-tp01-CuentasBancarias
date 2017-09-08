@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Beatriz Yanina Caballero ([xxx](https://github.com/ycaballero89))
+* Jorge Marco ([xxx](https://github.com/jorgemarco))
