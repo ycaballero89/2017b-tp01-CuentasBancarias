@@ -10,4 +10,9 @@ public class TestTransferencia {
 		CuentaBancaria cuenta = new CuentaBancaria(3500);
 		Assert.assertEquals(3500, cuenta.obtenerSaldo(), 0);
 	}
+	
+	@Test
+	public void queTransfieraMonto(){
+		Assert.fail();
+	}
 }
