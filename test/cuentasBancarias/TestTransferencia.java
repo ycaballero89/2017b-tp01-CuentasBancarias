@@ -35,6 +35,11 @@ public class TestTransferencia {
 		Assert.assertTrue(cuentaOrigen.validarSaldo(2000));
 		Assert.assertTrue(cuentaOrigen.validarSaldo(3500));
 	}
+	
+	@Test
+	public void queValideSaldoAntesDeTransferir(){
+		Assert.fail();
+	}
 }
 
 
