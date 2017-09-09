@@ -26,4 +26,11 @@ public class TestTransferencia {
 		//Verifica saldo cuenta destino
 		Assert.assertEquals(saldoInicialDestino+monto, cuentaDestino.obtenerSaldo(), 0);
 	}
+	
+	@Test
+	public void queValideSaldo(){		
+		Assert.fail();
+	}
 }
+
+
