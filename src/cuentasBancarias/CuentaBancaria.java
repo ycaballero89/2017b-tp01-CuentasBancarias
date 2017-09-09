@@ -16,4 +16,8 @@ public class CuentaBancaria {
 		this.saldo -= monto;
 		cuentaDestino.saldo += monto;
 	}
+	
+	public boolean validarSaldo(double monto){
+		return this.saldo >= monto;
+	}
 }

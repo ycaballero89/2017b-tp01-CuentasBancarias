@@ -29,7 +29,11 @@ public class TestTransferencia {
 	
 	@Test
 	public void queValideSaldo(){		
-		Assert.fail();
+		CuentaBancaria cuentaOrigen = new CuentaBancaria(3500);
+		
+		Assert.assertFalse(cuentaOrigen.validarSaldo(4000));
+		Assert.assertTrue(cuentaOrigen.validarSaldo(2000));
+		Assert.assertTrue(cuentaOrigen.validarSaldo(3500));
 	}
 }
 
