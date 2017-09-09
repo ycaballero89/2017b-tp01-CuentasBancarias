@@ -38,8 +38,20 @@ public class TestTransferencia {
 	
 	@Test
 	public void queValideSaldoAntesDeTransferir(){
-		Assert.fail();
+		CuentaBancaria cuentaOrigen = new CuentaBancaria(3500);
+		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
+
+		cuentaOrigen.transferirMontoHacia(4000, cuentaDestino);
+		Assert.assertFalse(cuentaOrigen.getEstado());//Verifica estado de transferencia
+		cuentaOrigen.transferirMontoHacia(700, cuentaDestino);
+		Assert.assertTrue(cuentaOrigen.getEstado());//Verifica estado de transferencia
+		cuentaOrigen.transferirMontoHacia(2800, cuentaDestino);
+		Assert.assertTrue(cuentaOrigen.getEstado());//Verifica estado de transferencia
+		cuentaOrigen.transferirMontoHacia(1, cuentaDestino);
+		Assert.assertFalse(cuentaOrigen.getEstado());//Verifica estado de transferencia
+		
 	}
+	
 }
 
 
