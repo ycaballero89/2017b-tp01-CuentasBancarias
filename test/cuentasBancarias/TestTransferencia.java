@@ -1,20 +1,27 @@
 package cuentasBancarias;
 
-import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Before;
+
 
 public class TestTransferencia {
-
+	CuentaBancaria cuentaOrigen;
+	CuentaBancaria cuentaDestino;
+	
+	@Before
+	public void inicializaObjetos() {
+		cuentaOrigen = new CuentaBancaria(3500);
+		cuentaDestino = new CuentaBancaria(0);
+	}
+		
 	@Test
 	public void queInicializeSaldo(){
-		CuentaBancaria cuenta = new CuentaBancaria(3500);
-		Assert.assertEquals(3500, cuenta.obtenerSaldo(), 0);
+		Assert.assertEquals(3500, cuentaOrigen.obtenerSaldo(), 0);
 	}
 	
 	@Test
 	public void queTransfieraMonto(){
-		CuentaBancaria cuentaOrigen = new CuentaBancaria(3500);
-		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
 		double saldoInicialOrigen = cuentaOrigen.obtenerSaldo();
 		double saldoInicialDestino = cuentaDestino.obtenerSaldo();
 		double monto = 400;
@@ -29,7 +36,6 @@ public class TestTransferencia {
 	
 	@Test
 	public void queValideSaldo(){		
-		CuentaBancaria cuentaOrigen = new CuentaBancaria(3500);
 		
 		Assert.assertFalse(cuentaOrigen.validarSaldo(4000));
 		Assert.assertTrue(cuentaOrigen.validarSaldo(2000));
@@ -38,8 +44,6 @@ public class TestTransferencia {
 	
 	@Test
 	public void queValideSaldoAntesDeTransferir(){
-		CuentaBancaria cuentaOrigen = new CuentaBancaria(3500);
-		CuentaBancaria cuentaDestino = new CuentaBancaria(0);
 
 		cuentaOrigen.transferirMontoHacia(4000, cuentaDestino);
 		Assert.assertFalse(cuentaOrigen.getEstado());//Verifica estado de transferencia
